@@ -24,7 +24,7 @@ digitalWrite(trigPin, LOW);
 duration = pulseIn(echoPin, HIGH);
 
   // Convert the time into a distance
-cm = (duration/2) / 29.1;     // Divide by 29.1 or multiply by 0.0343
+cm = (duration/2) * 0.0343     //Dist = speed * time (multiply by 0.0343)
  
 Serial.print(cm);
 Serial.print("cm");
