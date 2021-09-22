@@ -2,8 +2,7 @@ const int trigPin = 2;  //D4
 const int echoPin = 4;  //D3
 
 // defines variables
-long duration, cm;
-int distance;
+long duration, distance;
 
 void setup() {
 pinMode(trigPin, OUTPUT); // Sets the trigPin as an Output
@@ -24,8 +23,8 @@ digitalWrite(trigPin, LOW);
 duration = pulseIn(echoPin, HIGH);
 
   // Convert the time into a distance
-cm = (duration/2) * 0.0343     //Dist = speed * time (multiply by 0.0343)
+distance = (duration/2) * 0.0343     //Dist = speed * time (multiply by 0.0343)
  
-Serial.print(cm);
+Serial.print(distance);
 Serial.print("cm");
 Serial.println();
